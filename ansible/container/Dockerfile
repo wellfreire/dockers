@@ -4,6 +4,9 @@ MAINTAINER Well Freire <wellfreire1@gmail.com>
 
 # ============================================
 
+RUN apt-get update
+RUN apt-get install -y vim sshpass
+
 RUN pip install ansible
 
 RUN ansible --version
