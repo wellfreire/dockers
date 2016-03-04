@@ -1,0 +1,7 @@
+m1:
+    build: ./
+    hostname: m1-ansible.dev
+
+# m2:
+#     build: ./
+#     hostname: m2-ansible.dev
