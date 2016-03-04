@@ -1,0 +1,5 @@
+# This is a plain Ansible's inventory file
+
+[ci-servers]
+your.example-server-1.com
+your.example-server-2.com

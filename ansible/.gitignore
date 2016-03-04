@@ -1,1 +1,4 @@
 resources/ssh/*
+resources/playbooks/jenkins-ci/roles/*
+
+*.retry

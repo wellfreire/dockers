@@ -1,0 +1,37 @@
+---
+
+# ====================================
+# Global variables
+# ====================================
+
+remote_user: root
+
+# ====================================
+# Jenkins role specific variables
+# ====================================
+
+jenkins_http_port: 8080
+
+# which plugins to install by default
+jenkins_plugins:
+  - git
+  - sonar
+  - ssh
+  - checkstyle
+  - cloverphp
+  - crap4j
+  - dry
+  - htmlpublisher
+  - jdepend
+  - plot
+  - pmd
+  - violations
+  - xunit
+
+# Installs the current LTS version (for Debian/Ubuntu)
+jenkins_repo_url: deb http://pkg.jenkins-ci.org/debian-stable binary/
+jenkins_repo_key_url: http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key
+
+# Installs the current LTS version (for RedHat/CentOS)
+# jenkins_repo_url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+# jenkins_repo_key_url: http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key

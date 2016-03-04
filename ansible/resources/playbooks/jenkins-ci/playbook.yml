@@ -1,0 +1,17 @@
+---
+
+- name: Deploys a Jenkins server to the target hosts
+  hosts: ci-servers
+  become: Yes # should use sudo? Can change to 'No' or override by server in inventory
+  vars_files:
+    - ./vars/external_vars.yml
+
+  pre_tasks:
+
+    - name: Install needed dependencies
+      apt: pkg={{item}} state=present # does your servers use 'apt'?
+      with_items:
+        - curl
+
+  roles:
+    - jenkins
