@@ -2,6 +2,7 @@
 
 - name: Deploys a Jenkins server to the target hosts
   hosts: ci-servers
+  remote_user: "{{remote_user}}"
   become: Yes # should use sudo? Can change to 'No' or override by server in inventory
   vars_files:
     - ./vars/external_vars.yml
